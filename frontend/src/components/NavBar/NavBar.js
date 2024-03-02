@@ -4,9 +4,9 @@ import logo from './assets/logo.png';
 const NavBar = () => {
     return (
         <nav>
-            <div className='container'>
+            <div className='container-navbar'>
                 <div className='website-brand-title'>
-                    <img className='logo-image' src={logo} alt='logo' />
+                    <img className='logo-image' src={logo} alt='logo' />Blogs
                 </div>
                 <p>
                     <span>Blogs</span>

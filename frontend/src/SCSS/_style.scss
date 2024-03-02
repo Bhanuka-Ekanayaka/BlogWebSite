@@ -1,7 +1,16 @@
 $font-stack:Roboto,sans-serif;
 $main-color:#FFFFFF;
+$primary-color:#25799F;
+$brand-color:#089ED7;
+$front-primary-color:#666666;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
 
 body{
     box-sizing: border-box;
     background-color: $main-color;
+    margin: 0px;
 }

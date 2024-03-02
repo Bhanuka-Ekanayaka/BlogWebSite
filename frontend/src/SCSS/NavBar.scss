@@ -1,34 +1,61 @@
 @use 'style';
 
+@mixin respond-to($breakpoint) {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+
+
 nav {
 
     display: flex;
-    align-items: center;
+    justify-content: center;
 
-   .container{
-    background-color: style.$main-color;
-    display: inline-block;
-    min-width: 967px;
-    border:1px solid black;
-   }
+    .container-navbar {
+        min-width: 1248px;
+        display: flex;
+        background-color: style.$main-color;
 
-    .website-brand-title{
-        margin-left: 0px;
+        @include respond-to(style.$breakpoint-xl) {
+            min-width: 1100px;
+        }
+        @include respond-to(style.$breakpoint-lg) {
+            min-width: 800px;
+        }
+        @include respond-to(style.$breakpoint-md) {
+            min-width: 600px;
+        }
+        @include respond-to(style.$breakpoint-sm) {
+            min-width: 400px;
+        }
+
+        .website-brand-title {
+            margin-left: 0px;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            color: style.$brand-color;
+            font-family: "Permanent Marker", cursive;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .logo-image {
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        p span {
+            margin: 0px 5px;
+            font-size: medium;
+            font-weight: light;
+            color: style.$front-primary-color;
+        }
+
     }
 
-    .logo-image{
-        height: 50px;
-        width: 50px;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    p span{
-        margin: 0px 5px;
-        font-size: medium;
-        font-weight: light;
-    }
-  
-    
 
 }
