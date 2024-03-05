@@ -48,8 +48,9 @@ nav {
             object-position: center;
         }
 
-        p span {
+        p a {
             margin: 0px 5px;
+            text-decoration: none;
             font-size: medium;
             font-weight: light;
             color: style.$front-primary-color;
