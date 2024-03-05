@@ -1,12 +1,14 @@
-import NavBar from "./components/NavBar/NavBar";
-import SearchBar from "./components/SearchBar/SearchBar";
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import Home from "./View/Home";
 
 function App() {
   return (
-    <>
-      <NavBar/>
-      <SearchBar/>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+          
+      </Routes>
+    </Router>
   );
 }
 
